@@ -1,0 +1,124 @@
+/* Variáveis de cor para tema escuro */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #4caf50;
+    --hover-color: #388e3c;
+    --text-color: #f0f0f0;
+    --bg-color: #121212;
+    --border-color: #333333;
+    --whatsapp-color: #25d366;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar li a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 50px;
+    transition: color 0.3s ease;
+}
+.navbar li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Conteúdo Principal */
+.conteudo {
+    flex: 1;
+    padding: 32px;
+}
+
+/* Produtos */
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+.produto {
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+}
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Botão Saiba Mais */
+.saiba-mais {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.saiba-mais:hover {
+    background-color: var(--hover-color);
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--whatsapp-color);
+    color: var(--text-color);
+    padding: 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+}
